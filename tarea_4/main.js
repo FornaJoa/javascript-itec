@@ -50,7 +50,7 @@ const usuarios = [{"id":1,"first_name":"Melosa","last_name":"Paske","bank":"Raif
 {"id":50,"first_name":"Upton","last_name":"Fawson","bank":"Sparkasse Jena-Saale-Holzland","city":"Planaltina","country":"Brazil","salary":4343,"expenses":2213}]
 
 function balanceMensual(id) {
-    const user = usuarios.find(u => u.id === id);
+    const user = usuarios.find(user => user.id === id);
     const balance = user.salary - user.expenses;
     return {
         nombre: `${user.first_name} ${user.last_name}`,
@@ -61,7 +61,6 @@ function balanceMensual(id) {
 
 const id = parseInt(prompt('Ingrese el ID de la persona:'));
 console.log(balanceMensual(id));
-
 
 function clasificacionAhorro(ahorro){
     return ahorro < 500 
